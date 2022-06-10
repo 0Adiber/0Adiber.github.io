@@ -1,14 +1,49 @@
+const path = require(`path`);
+
 module.exports = {
-  siteMetadata: {
-    title: `0adiber.github.io`,
-    siteUrl: `https://0adiber.github.io`
-  },
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-react-helmet", "gatsby-plugin-mdx", {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
     },
-    __key: "pages"
-  }]
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: path.join(__dirname, `src`, `projects`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `0Adiber.github.io`,
+        short_name: `0Adiber`,
+        start_url: `/`,
+        icon: `src/images/ali.png`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: `Abyss`,
+            },
+          },
+          `gatsby-remark-images`,
+          `gatsby-remark-autolink-headers`,
+        ],
+      },
+    },
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
+  ],
 };

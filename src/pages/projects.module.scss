@@ -1,0 +1,38 @@
+@import '../style/colors';
+
+.entry {
+    margin-top: 1.5em;
+
+    .entry {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+        padding: 15px;
+        background-color: red;
+        border-radius: 3px;
+        margin: .2em 0;
+    
+        & > h3 {
+            margin: 0 !important;
+            align-items: baseline !important;
+    
+            &::before {
+                display: none;
+            }
+    
+            & > span {
+                font-size: .6em;
+                margin-left: .3em;
+            }
+        }
+    
+        & > p {
+            margin: 0 !important;
+            color: $textColor;
+        }
+    
+        &:focus {
+            outline: none;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import '../style/colors';
+
+.root {
+
+    & > div {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+
+        & > i {
+            font-size: .5em;
+            margin: 0 .5em;
+            color: $brightColor;
+            vertical-align: middle;
+        }
+    }
+}

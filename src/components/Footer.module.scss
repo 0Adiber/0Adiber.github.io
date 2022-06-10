@@ -1,0 +1,45 @@
+$textColor: #fff;
+$hovorColor: #a1a1a1;
+
+.footer {
+    font-family: 'Ubuntu Mono', sans-serif;
+    color: $textColor;
+
+    & > img {
+        width: 100%;
+        height: auto;
+    }
+    
+    & > div {
+        padding: 1em;
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        box-sizing: border-box;
+
+        & > div {
+            & > a {
+                display: inline-block;
+                font-size: 1.8em;
+                color: $textColor;
+                transition: .2s ease;
+                margin: 0 5px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+    
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+                &:hover {
+                    color: $hovorColor !important;
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@import '../style/colors';
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $textColor;
+
+    & > div {    
+        & > p {
+            padding-left: .4em;
+            font-size: .9em !important;
+        }
+    }
+
+
+    & > img {
+        height: 10em;
+    }
+}
