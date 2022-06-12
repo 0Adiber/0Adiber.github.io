@@ -10,9 +10,49 @@
         width: auto;
         height: 14em;
         border-radius: 50%;
-        border: 4px solid $brightColor;
+        border: 4px solid $midColor;
         margin-top: .5em;
-        // filter: grayscale(45%);
+        margin-bottom: 1em;
     }
 
+    & > h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+    }
+
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    img {
+        width: auto;
+        max-height: 8em;
+        margin: .5em;
+        transition: .2s ease-in-out;
+
+        &:hover {
+            transform: scale(1.03);
+        }
+    }
+
+    a {
+        &:active, &:focus {
+            outline: none;
+        }
+    }
+}
+
+.soundcloud {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    & > iframe {
+        width: 90%;
+        max-width: 500px;
+    }
 }

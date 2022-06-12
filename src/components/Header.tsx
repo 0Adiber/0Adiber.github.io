@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './MainHeader.module.scss';
+import * as style from './Header.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Typed from 'react-typed';
@@ -32,7 +32,6 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
 
   public componentDidMount(): void {
     window.onscroll = e => {
-      console.log(window.scrollY);
       if (window.scrollY > 200)
         this.setState({ banner: true, });
       else
@@ -99,14 +98,8 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
         { /* CONTENT */ }
 
         <div ref={e => this.article = e} className={style.article}>
-          <div className={style.content}
-            style={{
-              paddingTop: this.props.hideHeader ? '1.2em' : '0',
-            }}
-          >
-            <div>
+          <div className={style.content}>
               {this.props.children}
-            </div>
           </div>
         </div>
       </>

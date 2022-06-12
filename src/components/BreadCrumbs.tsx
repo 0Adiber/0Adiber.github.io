@@ -1,7 +1,7 @@
 import { Link } from 'gatsby';
 import React from 'react';
 import path from 'path';
-import style from './BreadCrumbs.module.scss';
+import * as style from './BreadCrumbs.module.scss';
 
 interface BreadCrumbsProps {
     links: { [name: string]: string, };

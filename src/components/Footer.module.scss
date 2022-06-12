@@ -1,45 +1,91 @@
-$textColor: #fff;
-$hovorColor: #a1a1a1;
+@import '../style/colors';
+
+.footer.top {
+    background-color: red;
+}
 
 .footer {
-    font-family: 'Ubuntu Mono', sans-serif;
-    color: $textColor;
-
-    & > img {
-        width: 100%;
-        height: auto;
+    /*FOOTER TOP*/
+    &-top {
+        background-color: $darkColor;
+        height: 350px;
+        text-align: center;
+        & > h3 {
+            color: white;
+            position: relative;
+            top: 100px;
+            font-family: 'Dosis', sans-serif;
+            font-weight: 100;
+            font-variant: small-caps;
+            margin: 0;
+            font-size: 20px;
+        }
     }
-    
-    & > div {
-        padding: 1em;
-        width: 75%;
+
+    &-logos {
+        font-size: 40px;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%);
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+    }
+
+    &-icon {
+        height: 40px;
+        color: white;
+        transition: all 200ms ease-in-out;
+        &:hover {
+            color: $backgroundColor;
+        }
+    }
+
+    &-link {
+        &:first-child {
+            margin-left: 0;
+        }
+        padding: 0;
+        margin-left: 20px;
+    }
+
+    &-wrapper {
+        margin: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        margin: 0 auto;
-        box-sizing: border-box;
+        cursor: pointer;
+        & > span {
+            position: absolute;
+            top: 60%;
+            margin-top: 5px;
+            padding: 5px 10px;
+            font-size: 15px;
+            font-weight: 500;
+            white-space: nowrap;
+            color: #000;
+            border-radius: 50px;
+            background-color: #fff;
+            box-shadow: 0 15px 35px rgba(50, 50, 93, 0.1),
+                0 5px 15px rgba(0, 0, 0, 0.07);
 
-        & > div {
-            & > a {
-                display: inline-block;
-                font-size: 1.8em;
-                color: $textColor;
-                transition: .2s ease;
-                margin: 0 5px;
-
-                &:first-child {
-                    margin-left: 0;
-                }
-    
-                &:last-child {
-                    margin-right: 0;
-                }
-    
-                &:hover {
-                    color: $hovorColor !important;
-                    transform: scale(1.1);
-                }
+            pointer-events: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            opacity: 0;
+            transition: all 0.2s ease-in-out;
+            font-family: 'Ubuntu Mono', sans-serif;
+        }
+        &:hover {
+            span {
+                top: 100%;
+                opacity: 0.9;
             }
         }
     }
 }
+

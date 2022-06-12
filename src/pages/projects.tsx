@@ -1,16 +1,16 @@
 import React from 'react';
 import BreadCrumbs from '../components/BreadCrumbs';
 import Footer from '../components/Footer';
-import MainHeader from '../components/MainHeader';
+import Header from '../components/Header';
 import { graphql, Link } from 'gatsby';
-import style from './projects.module.scss';
+import * as style from './projects.module.scss';
 
 const Projects = ({ data, }) => {
     const posts = data.allMarkdownRemark.nodes;
 
     return (
         <>
-            <MainHeader hideHeader>
+            <Header hideHeader>
                 <BreadCrumbs links={{
                     '/': 'Home',
                     '/projects': 'Projects',
@@ -25,7 +25,7 @@ const Projects = ({ data, }) => {
                             <p>{p.frontmatter.desc}</p>
                         </Link>)}
                 </div>
-            </MainHeader>
+            </Header>
             <Footer />
         </>
     );

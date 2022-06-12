@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import style from './entry.module.scss';
+import * as style from './entry.module.scss';
 import { Helmet } from 'react-helmet';
-import MainHeader from '../components/MainHeader';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import BreadCrumbs from '../components/BreadCrumbs';
 
@@ -28,7 +28,7 @@ const Post = ({ data, location, }) => {
                     : <></>
                 }
             </Helmet>
-            <MainHeader hideHeader>
+            <Header hideHeader>
                 <BreadCrumbs links={links} />
                 <div className={style.heading}>
                     <div>
@@ -43,7 +43,7 @@ const Post = ({ data, location, }) => {
                 </div>
                 <hr />
                 <div dangerouslySetInnerHTML={{ __html: post.html, }}></div>
-            </MainHeader>
+            </Header>
             <Footer />
         </>
     );

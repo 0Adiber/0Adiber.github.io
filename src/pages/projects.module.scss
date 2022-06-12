@@ -1,24 +1,18 @@
 @import '../style/colors';
 
 .entry {
-    margin-top: 1.5em;
-
     .entry {
         display: block;
         text-decoration: none;
         color: inherit;
-        padding: 15px;
-        background-color: red;
-        border-radius: 3px;
+        padding: 20px;
         margin: .2em 0;
+
+        border-bottom: 1px solid $backgroundColor;
+        border-top: 1px solid $backgroundColor;
     
         & > h3 {
-            margin: 0 !important;
-            align-items: baseline !important;
-    
-            &::before {
-                display: none;
-            }
+            margin: 0;
     
             & > span {
                 font-size: .6em;
@@ -27,7 +21,7 @@
         }
     
         & > p {
-            margin: 0 !important;
+            margin: 0;
             color: $textColor;
         }
     

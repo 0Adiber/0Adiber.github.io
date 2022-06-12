@@ -7,11 +7,17 @@
         align-items: center;
         vertical-align: middle;
 
-        & > i {
-            font-size: .5em;
-            margin: 0 .5em;
-            color: $brightColor;
+        & > a {
+            font-size: .9em;
+            margin: .5em;
+            color: $midColor;
             vertical-align: middle;
+            text-decoration: none;
+            transition: color 150ms ease-in-out;
+
+            &:hover {
+                color: $brightColor;
+            }
         }
     }
 }
