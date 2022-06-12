@@ -2,7 +2,7 @@
 title: "Minecraft Movies"
 desc: "POC for playing Video files in vanilla Minecraft"
 ref: "0Adiber/MinecraftMovies"
-coverImage: "../images/projects/minecraftmovies.png"
+coverImage: "../images/projects/minecraftmovies.webp"
 ---
 ## About
 

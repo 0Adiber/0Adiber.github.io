@@ -5,9 +5,9 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Typed from 'react-typed';
 import { Link } from 'gatsby';
 
-import hackerman from '../images/hackerman.png';
-import background from '../images/background.png';
-import ali from '../images/ali.png'
+import hackerman from '../images/hackerman.webp';
+import background from '../images/background.webp';
+import ali from '../images/ali.webp'
 
 interface MainHeaderProps {
   children?: React.ReactElement|React.ReactElement[];

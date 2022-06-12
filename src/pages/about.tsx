@@ -4,7 +4,7 @@ import Header from '../components/Header';
 import BreadCrumbs from '../components/BreadCrumbs';
 import Footer from '../components/Footer';
 
-import profilePic from '../images/ali.png';
+import profilePic from '../images/ali.webp';
 const About = ({ data, }) => {
     return (
         <>

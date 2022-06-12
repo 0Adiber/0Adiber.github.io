@@ -22,7 +22,7 @@ module.exports = {
         name: `0Adiber.github.io`,
         short_name: `0Adiber`,
         start_url: `/`,
-        icon: `src/images/ali.png`,
+        icon: `src/images/ali.webp`,
       },
     },
     {
