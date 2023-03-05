@@ -11,6 +11,6 @@
 
 ## About
 
-Now that school is over, I finally started with my new website, hosting it on [GitHub pages](https://pages.github.com/).
+New website ...hosted on [GitHub pages](https://pages.github.com/).
 
 

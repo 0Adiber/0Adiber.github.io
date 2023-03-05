@@ -1,12 +1,8 @@
 import React from 'react';
 import * as style from './Header.module.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import Typed from 'react-typed';
 import { Link } from 'gatsby';
 
-import hackerman from '../images/hackerman.webp';
-import background from '../images/background.webp';
 import ali from '../images/ali.webp'
 
 interface MainHeaderProps {
@@ -47,6 +43,12 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
   }
 
   public render (): React.ReactElement {
+  
+    const flies: React.ReactElement[] = [];
+    for (let i = 0; i < 20; i++) {
+      flies.push(<div key={`firefly-${i}`} className={style.firefly}></div>);
+    }
+
     return (
       <>
       
@@ -74,12 +76,13 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
 
         { /* MAIN HEADER */ }
 
-        <div ref={e => this.header = e} className={style.header}
+        <div ref={e => this.header = e as HTMLElement} className={style.header}
           style={{
             display: this.props.hideHeader ? 'none' : 'block',
           }}
         >
-          <div className={style.lightning + " " + style.flashfx}></div>
+
+          {flies}
 
           <h1>
             Ad<span><Typed
@@ -91,13 +94,12 @@ export default class MainHeader extends React.Component<MainHeaderProps, MainHea
             /></span>
           </h1>
 
-          <img className={style.hackerman} src={hackerman} alt="Häckermän" />
-          <div className={style.more} ref={e => this.scroll = e} onClick={this.onScroll.bind(this)}></div>
+          <div className={style.more} ref={e => this.scroll = e as unknown as HTMLButtonElement} onClick={this.onScroll.bind(this)}></div>
         </div>
 
         { /* CONTENT */ }
 
-        <div ref={e => this.article = e} className={style.article}>
+        <div ref={e => this.article = e as HTMLDivElement} className={style.article}>
           <div className={style.content}>
               {this.props.children}
           </div>
